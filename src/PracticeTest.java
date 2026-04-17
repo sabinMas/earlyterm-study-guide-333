@@ -1,7 +1,5 @@
-import static org.junit.Assert.*;
-
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-
 public class PracticeTest {
 
     // TODO: Make more tests for maxDiff
@@ -15,11 +13,20 @@ public class PracticeTest {
 
         // Assert
         // Largest: 9, Smallest: -5, Difference: 9 - -5 = 14
+        System.out.println("Result of maxDiff test: " + actual);
         assertEquals(14, actual);
     }
-    
+    @Test
+    void testMaxDiffNegativeNumbers() {
+        int[] nums = {-10, -3, -1, -7};
+        assertEquals(9, Practice.maxDiff(nums));
+    }
 
-    // TODO: Make tests for each problem you solve
+    @Test
+    void testMaxDiffSingleElement() {
+        int[] nums = {5};
+        assertEquals(0, Practice.maxDiff(nums));
+    }
     
 }
 
