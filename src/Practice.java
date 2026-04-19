@@ -22,7 +22,7 @@ public class Practice {
         return maxNumber - minNumber;
     }
     // TODO: Implement the other methods from the README AND tests for each one
-    public static String longestWord(ArrayList<String> words, char firstLetter){
+    public static String longestWordGiven1stChar(ArrayList<String> words, char firstLetter){
         String longest = ""; 
         for(String word : words){
             if(word.charAt(0) == firstLetter && word.length() > longest.length()){
@@ -31,6 +31,18 @@ public class Practice {
             
         } 
         return longest;      
+    }
+
+    public static String longestWordArray(String [] words, char firstChar){
+        String longestWord = "";
+        for(String word : words){
+            char [] ch = word.toCharArray();
+            char first = ch[0];
+            if (firstChar == first && word.length()>longestWord.length()){
+                longestWord = word;
+            }
+        }
+        return longestWord;
     }
 
     public static int lessThanLongerThan(HashMap<String, String> words, int n, int m){
@@ -44,6 +56,15 @@ public class Practice {
         return counter;
     }
 
+    public static int lessThanLongerThanArray(String [] words, int less, int more){
+        int counter = 0; 
+        for(String word : words){
+            if(word.length()>more && word.length()<less){
+                counter++;
+            }
+        }
+        return counter;
+    }
 
     public static int diffOddEven(HashSet<Integer> nums){
         int evenNums = 0;
