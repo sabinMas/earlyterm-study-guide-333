@@ -33,17 +33,17 @@ public class Practice {
         return longest;      
     }
 
-    public static String longestWordArray(String [] words, char firstChar){
-        String longestWord = "";
-        for(String word : words){
-            char [] ch = word.toCharArray();
-            char first = ch[0];
-            if (firstChar == first && word.length()>longestWord.length()){
-                longestWord = word;
-            }
-        }
-        return longestWord;
-    }
+    // public static String longestWordArray(String [] words, char firstChar){
+    //     String longestWord = "";
+    //     for(String word : words){
+    //         char [] ch = word.toCharArray();
+    //         char first = ch[0];
+    //         if (firstChar == first && word.length()>longestWord.length()){
+    //             longestWord = word;
+    //         }
+    //     }
+    //     return longestWord;
+    // }
 
     public static int lessThanLongerThan(HashMap<String, String> words, int n, int m){
        int counter = 0;
@@ -56,15 +56,15 @@ public class Practice {
         return counter;
     }
 
-    public static int lessThanLongerThanArray(String [] words, int less, int more){
-        int counter = 0; 
-        for(String word : words){
-            if(word.length()>more && word.length()<less){
-                counter++;
-            }
-        }
-        return counter;
-    }
+    // public static int lessThanLongerThanArray(String [] words, int less, int more){
+    //     int counter = 0; 
+    //     for(String word : words){
+    //         if(word.length()>more && word.length()<less){
+    //             counter++;
+    //         }
+    //     }
+    //     return counter;
+    // }
 
     public static int diffOddEven(HashSet<Integer> nums){
         int evenNums = 0;

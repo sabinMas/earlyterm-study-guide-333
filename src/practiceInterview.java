@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class practiceTestInterview {
+public class practiceInterview {
    
 
    public static int wordsLongerThanLessThan(ArrayList<String> words, int n, int m){
